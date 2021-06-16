@@ -52,7 +52,7 @@ while(run):
                                 commands.volume_control('up')
                             elif 'down' in MyText:
                                 commands.volume_control('down')
-                            elif 'mute' in MyText:
+                            elif 'mute' in MyText or 'unmute' in MyText:
                                 commands.volume_control('mute')
 
                         elif command_list[x] == 'goodbye':
