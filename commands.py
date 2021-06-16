@@ -72,3 +72,13 @@ def get_answer():
         except sr.UnknownValueError:
             print("unknown error occured")
         
+def volume_control(command):
+    
+    if command == 'up':
+        for x in range(5):
+            pyautogui.press('volumeup')
+    elif command == 'down':
+        for x in range(5):
+            pyautogui.press('volumedown')
+    elif command == 'mute':
+        pyautogui.press('volumemute')

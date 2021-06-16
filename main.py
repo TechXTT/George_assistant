@@ -2,7 +2,7 @@ import speech_recognition as sr
 
 import commands
 
-command_list = ['ip','open','calculate','goodbye']
+command_list = ['ip','open','calculate','goodbye','volume']
 r = sr.Recognizer()
 run = True
 while(run):
@@ -47,6 +47,14 @@ while(run):
                                         commands.open_program(splited[y+1])
                                         break
                         
+                        elif command_list[x] == 'volume':
+                            if 'up' in MyText:
+                                commands.volume_control('up')
+                            elif 'down' in MyText:
+                                commands.volume_control('down')
+                            elif 'mute' in MyText:
+                                commands.volume_control('mute')
+
                         elif command_list[x] == 'goodbye':
                             commands.SpeakText('Goodbye')
                             run = False
