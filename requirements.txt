@@ -3,3 +3,4 @@ pyaudio
 ipify
 pyautogui
 pyttsx3
+opencv-python
