@@ -41,7 +41,7 @@ def get_ip(command):
         print(global_ip)
 
 def open_program(program):
-    win_button = pyautogui.locateOnScreen('win.png')
+    win_button = pyautogui.locateOnScreen('win.png', confidence=0.8)
     pyautogui.click(win_button)
     pyautogui.write(program)
     SpeakText('Is this it')
