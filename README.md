@@ -1,6 +1,6 @@
 # George_assistant
-## The most basic virtual assistant you've seen 
 
+## The most basic virtual assistant you've seen
 
 George is a virtual assistant of a new generation.
 It's so basic and dumb that you won't believe it.
@@ -11,7 +11,7 @@ It's so basic and dumb that you won't believe it.
 - Answering on wake word (Guess which one)(Hint : it's George)
 - Can give you global and local ip address if you are too lazy to get it yourself
 - Opens programs one command (open)
-- Calculates the most basic of math problems 
+- Calculates the most basic of math problems
 
 ## Tech
 
@@ -30,10 +30,16 @@ And of course George_assistant itself is open source with a [public repository](
 
 George requires [Python](https://www.python.org/downloads/) v3.6.x to run.
 
-Install the dependencies and devDependencies and start the server.
+Install the libraries.
 
 ```sh
+git clone https://github.com/TechXTT/George_assistant
 cd George_assistant
 pip install -r requirements.txt
 ```
 
+Start the assistant.
+
+```sh
+python3 main.py
+```
