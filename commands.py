@@ -1,4 +1,5 @@
 import socket
+from typing import Text
 
 import ipify
 import pyautogui
@@ -26,8 +27,10 @@ def Calculate(num_1, operation, num_2):
         result = num_1 / num_2
     else:
         SpeakText('Incorrect operation')
+        print('Incorrect operation')
         exit
     SpeakText(result)
+    print(result)
 
 def get_ip(command):
     if command == 'local':
@@ -35,16 +38,19 @@ def get_ip(command):
         local_ip = socket.gethostbyname(hostname)
 
         print(local_ip)
+        SpeakText(local_ip)
     if command == 'global':
         global_ip = ipify.get_ip()
 
         print(global_ip)
+        SpeakText(global_ip)
 
 def open_program(program):
     win_button = pyautogui.locateOnScreen('win.png', confidence=0.8)
     pyautogui.click(win_button)
     pyautogui.write(program)
     SpeakText('Is this it')
+    print('Is this it')
     Answer = get_answer()
     if Answer == 'yes':
         pyautogui.press('enter')
@@ -65,6 +71,7 @@ def get_answer():
                     return Answer
                 else:
                     SpeakText('I did not hear that could you repeat')
+                    print('I did not hear that could you repeat')
 
         except sr.RequestError as e:
             print("Could not request results; {0}".format(e))
